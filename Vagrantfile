@@ -21,4 +21,13 @@ Vagrant.configure("2") do |config|
      vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
+  # Provision via ansible
+  if provision
+    config.vm.provision :ansible do |ansible|
+      # Ansible playbook in project directory
+      ansible.playbook = "provisioning/playbook.yml"    
+      # If something goes wrong, you'll want Ansible to be more verbose.
+      ansible.verbose = true
+    end
+  end
 end
