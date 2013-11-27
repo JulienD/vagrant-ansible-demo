@@ -9,6 +9,4 @@
     git_username: username
     git_usermail: mail@example.com
   tasks:
-    - include: roles/nginx/tasks/main.yml
-  handlers:
-    - include: roles/nginx/handlers/main.yml
+    - include: git/tasks/setup.yml
