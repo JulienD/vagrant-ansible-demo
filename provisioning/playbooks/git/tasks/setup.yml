@@ -1,0 +1,10 @@
+---
+# Git installation
+- name: Git | Install git base packages
+  apt: pkg=git-core state=present
+
+# Install the default templates
+- name: Git | Push global config file
+  template: 
+    src=gitconfig.j2
+    dest=/etc/gitconfig

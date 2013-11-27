@@ -1,0 +1,9 @@
+---
+# Bootstrap installation
+- name: Bootstrap | Install utils and tools
+  apt: pkg={{item}} state=present
+  with_items:
+    - htop
+    - curl
+    - vim
+
