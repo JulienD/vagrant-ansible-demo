@@ -3,11 +3,6 @@
   user: vagrant
   sudo: True
   gather_facts: False
-  vars:
-    git_username: JulienD
-    git_usermail: dubreuil.julien@gmail.com
   tasks:
     # Install tools and utils
     - include: playbooks/bootstrap/tasks/setup.yml  
-    # Install Git.
-    - include: playbooks/git/tasks/setup.yml  
